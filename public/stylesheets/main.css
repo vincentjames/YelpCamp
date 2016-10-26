@@ -14,3 +14,7 @@ body {
     padding: 9px;
 }
 
+#deleteForm {
+    display: inline;
+}
+
