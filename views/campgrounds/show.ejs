@@ -42,7 +42,12 @@
                                 <strong><%= comment.author.username %></strong>
                                 <span class="pull-right">10 days ago</span>
                                 <p><%= comment.text %></p>
-                                <a href="/campgrounds/<%=campground.id%>/comments/<%=comment._id%>/edit" class="btn btn-warning">Edit</a>
+                                <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                                    <a href="/campgrounds/<%=campground.id%>/comments/<%=comment._id%>/edit" class="btn btn-warning">Edit</a>
+                                    <form id="deleteForm" action="/campgrounds/<%=campground.id%>/comments/<%=comment._id%>?_method=delete" method="post">
+                                        <input type="submit" class="btn btn-danger" value="Delete">
+                                    </form>
+                                <% } %>
                             </div><!-- col-md-12 -->
                         </div><!-- row -->
 			            
