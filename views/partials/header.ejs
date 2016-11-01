@@ -25,3 +25,15 @@
 		</div><!-- .container-fluid / nav -->	
 	</nav><!-- navbar -->
 	
+    <div class="container">
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger">
+                <%= error %>
+            </div><!-- danger -->
+        <% } %>
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success">
+                <%= success %>
+            </div><!-- success -->
+        <% } %>
+	</div>

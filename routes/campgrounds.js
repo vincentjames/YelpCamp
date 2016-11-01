@@ -90,9 +90,6 @@ router.delete("/:id", middleware.checkCampgroundOwnership, function(req, res) {
 
 
 
-// Middleware
-
-
 
 
 module.exports = router;
